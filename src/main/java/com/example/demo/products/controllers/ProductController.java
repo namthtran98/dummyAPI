@@ -94,8 +94,6 @@ public class ProductController {
         }
     }
 
-
-
     @PutMapping("/products/{id}")
     public Product updateProduct(@PathVariable("id") Integer id, @RequestBody Product p) {
         Optional<Product> productToUpdateOptional = this.productRepository.findById(id);
